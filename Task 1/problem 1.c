@@ -1,9 +1,9 @@
+
+//problem 1
 #include <stdio.h>
-#include <string.h>
-#include <math.h>
-#include <stdlib.h>
-int MaxNUm(int ARRAY[]);
-int MinNUM(int ARRAY[]);
+
+int MaxNum(int ARRAY[]);
+int MinNum(int ARRAY[]);
 
 int counter=0 ;
 
@@ -17,12 +17,12 @@ int main() {
         }
         counter++;
      }
-     printf("%d %d",MaxNUm(NUMArray),MinNUM(NUMArray));
+     printf("%d %d",MaxNum(NUMArray),MinNum(NUMArray));
 
     return 0;
  }
 
- int MaxNUm(int ARRAY[]){
+ int MaxNum(int ARRAY[]){
      int mx= ARRAY[0];
      for (int i =1 ; i<counter ; i++){
         if (mx<ARRAY[i]){
@@ -32,7 +32,7 @@ int main() {
      return mx ;
  }
 
- int MinNUM(int ARRAY[]){
+ int MinNum(int ARRAY[]){
      int mn= ARRAY[0];
      for (int i =1 ; i<counter ; i++){
         if (mn>ARRAY[i]){
