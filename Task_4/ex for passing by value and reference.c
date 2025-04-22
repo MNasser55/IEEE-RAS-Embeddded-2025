@@ -16,7 +16,7 @@ int main() {
     int num2 = 5;
 
     passByValue(num1);
-    printf("After passByValue: num1 = %d\n\n", num1);// wont change coz num1 is local value not global so we will use pointer
+    printf("After passByValue: num1 = %d\n\n", num1);// wont change cuz num1 is local value not global so we will use pointer
 
     passByReference(&num2);
     printf("After passByReference: num2 = %d\n", num2);

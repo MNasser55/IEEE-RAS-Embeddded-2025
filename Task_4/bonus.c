@@ -10,7 +10,7 @@ printf("%d",*a);
 
     return 0;
 }*/
-// that will makes Segmentation fault coz the system saves its data from write without permission <3
+// that will makes Segmentation fault cuz the system saves its data from write without permission <3
 // we can solve that with
 #include <windows.h>
 #include <stdio.h>
