@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1751380558 source:e:\ieee\embedded systems\ieee-ras-embeddded-2025\bank customer system\main.c
+	<stdio.h>
+	<stdlib.h>
+	"functions.h"
+
+1751476275 e:\ieee\embedded systems\ieee-ras-embeddded-2025\bank customer system\functions.h
+
+1751476219 source:e:\ieee\embedded systems\ieee-ras-embeddded-2025\bank customer system\functions.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"functions.h"
+

@@ -1,0 +1,5 @@
+You got an Address 0x600000 or any address how to access and write in it.
+
+
+Note: Accessing a specific hexadecimal memory address directly is generally unsafe and should only be done in controlled environments (e.g., embedded systems or low-level programming).
+ المفروض 
