@@ -11,44 +11,27 @@ int print_List(struct Node* head) {
     struct Node* current = head;
 
     printf("Your train (circul linked list) has:\n");
-    printf("(node %d) -> ", current->data);
+    printf("(node%d %d) -> ",i, current->data);
     current = current->next;
     while (i!=7) {
             i++;
-        printf("(node %d) -> ", current->data);
+        printf("(node%d %d) -> ",i, current->data);
 
         current = current->next;
 }
 printf("etc ... \n");
 }
+void ins_atbeg(struct Node** head,int value){
+    struct Node* newnode=(struct Node*)malloc(sizeof(struct Node));
+    struct Node* temp=*head;
+newnode->data=value;
+newnode->next=*head;
+while (temp->next!=*head){
+    temp=temp->next;        //to reach to the last node
+}
 
-struct Node* insertAtPosition(struct Node* head, int data, int position) {
-    struct Node* newNode = malloc(sizeof(struct Node));
-    newNode->data = data;
-
-    if (head == NULL) {
-        newNode->next = newNode;
-        return newNode;
-    }
-
-    if (position <= 1) {
-        struct Node* temp = head;
-        while (temp->next != head) temp = temp->next;
-
-        temp->next = newNode;
-        newNode->next = head;
-        return newNode;
-    }
-
-    struct Node* temp = head;
-    for (int i = 1; i < position - 1 && temp->next != head; i++) {
-        temp = temp->next;
-    }
-
-    newNode->next = temp->next;
-    temp->next = newNode;
-
-    return head;
+temp->next=newnode;
+*head=newnode;
 }
 
 void freeList(struct Node* head) {
@@ -75,8 +58,8 @@ newnode2->next=head;
 newnode->next=newnode2;
 
     print_List(head);
-    printf("\nAfter insert at the certain\n\n");
-    head = insertAtPosition(head, 50, 2);
+    printf("\nAfter insert at the beginning\n\n");
+    ins_atbeg(&head,0);
     print_List(head);
     freeList(head);
 
